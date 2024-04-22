@@ -1,9 +1,9 @@
 # Your Project's Title...
-Your project's description...
+This Project is a test for a two repository setup.
 
 ## Environments
-- Preview: [https://main--eds-editorial--ifahrentholz.hlx.page/](https://main--eds-editorial--ifahrentholz.hlx.page/)
-- Live: [https://main--eds-editorial--ifahrentholz.hlx.live/](https://main--eds-editorial--ifahrentholz.hlx.live/)
+- Preview: [https://main--eds-dev--loomingecho.hlx.page/](https://main--eds-dev--loomingecho.hlx.page)
+- Live: [https://main--eds-dev--loomingecho.hlx.live/](https://main--eds-dev--loomingecho.hlx.live)
 
 ## Installation
 

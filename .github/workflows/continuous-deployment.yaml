@@ -23,6 +23,7 @@ jobs:
           repository: LoomingEcho/eds-prod
           path: eds-prod
           ref: stage
+          token: ${{ secrets.CD_TOKEN }}
 
       - name: Remove dist from prod
         run: rm -rf eds-prod/dist

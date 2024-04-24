@@ -85,7 +85,7 @@ jobs:
 
       - name: Setup git user
         run: |
-          git config --global user.name "$CI_COMMIT_AUTHOR"
+          git config --global user.name "EDS CI/CD"
           git config --global user.email "eds-dev-ci@diva-e.com"    
 
       - name: Add dist

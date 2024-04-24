@@ -34,6 +34,7 @@ jobs:
         run: |
           cd eds-prod
           git config --global user.name "EDS CI/CD"
-          git config --global user.email "eds-dev-cd@diva-e.com"  
+          git config --global user.email "eds-dev-cd@diva-e.com"
+          git add dist
           git commit -m "Deploy dist"
           git push

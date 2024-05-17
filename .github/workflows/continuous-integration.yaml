@@ -88,7 +88,19 @@ jobs:
           git add -f ./dist
           git add -f ./types
 
+      - name: Check if dist directory has changed
+        id: check-dist-changes
+        run: |
+          before_commit="$github.event.before"
+          
+          if git diff --quiet HEAD "$before_commit" -- ./dist; then
+          echo "No changes detected in the dist directory."
+          else
+          echo "dist_changed=true" >> "$GITHUB_ENV"
+          fi
+
       - name: Commit and push dist
+        if: steps.check-dist-changes.outputs.dist_changed == 'true'
         run: |
           git commit -m "Rebuild dist from CI"
           git push

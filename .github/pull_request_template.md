@@ -4,12 +4,13 @@ Fix #<gh-issue-id>
 
 
 **Test URLs:**
-- Before: https://develop--eds-dev--loomingecho.hlx.page/ <!-- On dev to main its main -->
-- After: https://<branch>--eds-dev--loomingecho.hlx.page/ <!-- change <branch> to the branch name  -->
+- Before: https://develop--eds-dev--loomingecho.hlx.page/ <!-- On dev to main merge its main -->
+- After: https://<branch>--eds-dev--loomingecho.hlx.page/ <!-- change <branch> to the branch name -->
 
 **Checklist:**
-- [ ] Tests added/passed ?
-- [ ] Documentation updated ?
-- [ ] PSi Checks passed ?
-- [ ] Code reviewed ?
-- [ ] Ready for merge ?
+- [ ] Tests added/passed 
+- [ ] Documentation updated 
+- [ ] PSI Checks passed
+- [ ] Test environment works as expected
+- [ ] New Block/Feature/Component works on test environment
+- [ ] Code reviewed 

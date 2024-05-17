@@ -90,5 +90,5 @@ jobs:
 
       - name: Commit and push dist
         run: |
-          git commit -m "$CI_COMMIT_MESSAGE"
+          git commit -m "Rebuild dist from CI"
           git push

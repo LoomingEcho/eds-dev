@@ -15,17 +15,6 @@ jobs:
         with:
           ref: main
 
-      - name: Install dependency's
-        run: npm ci
-
-      - name: Change fstab.yml to prod
-        run: |
-          rm fstab.yaml
-          cp .github/fstab_prod.yml fstab.yml
-
-      - name: Build prod dist
-        run: npm run build
-
       - name: Checkout prod repository
         uses: actions/checkout@v4
         with:

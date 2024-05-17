@@ -14,26 +14,34 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          sparse-checkout: |
-            dist  
+
+      - name: Install dependency's
+        run: cd npm -ci
+
+      - name: Change fstab.yml to prod
+        run: |
+          rm fstab.yaml
+          cp .github/fstab_prod.yml fstab.yml
+
+      - name: Build prod dist
+        run: npm run build
 
       - name: Checkout prod repository
         uses: actions/checkout@v4
         with:
-          repository: LoomingEcho/eds-prod
-          path: eds-prod
-          ref: stage
-          token: ${{ secrets.CD_TOKEN }}
+          path: prod
+          ref: prod
 
       - name: Remove dist from prod
-        run: rm -rf eds-prod/dist
+        run: rm -rf prod/dist
 
       - name: Copy dist from dev to prod stage
-        run: cp -r dist eds-prod/
+        run: cp -r dist prod/
 
       - name: Commit and push to prod repository
         run: |
-          cd eds-prod
+          cd prod
+          git add -f ./dist
           git config --global user.name "EDS CI/CD"
           git config --global user.email "eds-dev-cd@diva-e.com"
           git add dist
